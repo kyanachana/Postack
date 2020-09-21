@@ -1,41 +1,44 @@
-# Name（リポジトリ/プロジェクト/OSSなどの名前）
+# ポスティング対策装置【Postack】
 
-分かりやすくてカッコイイ名前をつける（今回は"hoge"という名前をつける）
+３日振りにポストの中身を見ると…
+大量のチラシとたまに重要な書類
 
-"hoge"が何かを簡潔に紹介する
+チラシは届けてほしくないし、重要な郵便物が来たら知らせてほしい…
+そんな願いを叶えたのがこの”Postskack"です！
 
 # DEMO
 
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
+自宅のポストにM5Stackを磁石で貼り付けます。
 
-# Features
+負担は寝ているのですが、ポストの蓋が動いたらジャイロセンサーに反応して、怒り出します。
 
-"hoge"のセールスポイントや差別化などを説明する
+郵便配達員にしか分からない質問（例：「この家の郵便番号は？」）を投げかけ、答えられれば郵便物、間違えればチラシだと判断します。
+
+郵便物だと判断した場合→自分のLINEに通知する
+チラシだと判断した場合→嫌な音を出して撃退する
+
+とても便利なポスティング対策装置です！
 
 # Requirement
 
-"hoge"を動かすのに必要なライブラリなどを列挙する
+* M5Stack Gray
+* Arduino 1.8.13
 
-* huga 3.5.2
-* hogehuga 1.0.2
+# Usage。
 
-# Installation
+http://kyokucho1989.chillout.jp/2019/11/09/ifttt%E3%81%A7%E7%B0%A1%E5%8D%98iot%EF%BC%81m5stack%E3%81%A8line%E3%82%92%E9%80%A3%E6%90%BA%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/
+これを参考にして、M5StackからLINEBotに通知が来るようにします。この時、event_nameはpush_lineにしてください。
 
-Requirementで列挙したライブラリなどのインストール方法を説明する
 
-```bash
-pip install huga_package
 ```
-
-# Usage
-
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
-
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
+git clone https://github.com/kyanachana/Postack.git
 ```
+wifiのssidとパスワード、IFTTTのmaker keyを変更する。
+
+postack_codeをM5Stack Grayに書き込みます。
+
+
+自宅のポストの蓋に磁石でくっつけたら完成です(≧▽≦)
 
 # Note
 
@@ -43,17 +46,4 @@ python demo.py
 
 # Author
 
-作成情報を列挙する
-
-* 作成者
-* 所属
-* E-mail
-
-# License
-ライセンスを明示する
-
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
-
-社内向けなら社外秘であることを明示してる
-
-"hoge" is Confidential.
+Kyanachana

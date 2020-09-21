@@ -29,13 +29,15 @@ const char* lyrics[] = {"READ ME",     "Answer",     "this question!",
 const int lyricsSize = sizeof(lyrics) / sizeof(char*);
 int lyricsIdx = 0;
 
+
+//以下の三か所の****を自分の値に書き換える
 //wifiのssid,password設定に合わせる
-const char* ssid     = "BCW710J-39720-G";
-const char* password = "3a5e54dc5383a";
+const char* ssid     = "************";
+const char* password = "************";
 
 //IFTTTの設定に合わせる
 String makerEvent = "push_line"; // Maker Webhooks
-String makerKey = "bJ--W24ke4g0dhLX5MAc6EMG91wTQLLVVafFHAL9j_c"; // Maker Webhooks
+String makerKey = "***********************"; // Maker Webhooks
 
 const char* server = "maker.ifttt.com";  // Server URL
 WiFiClient client;
